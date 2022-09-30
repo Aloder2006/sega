@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sega</title>
+    <link rel="icon" href="Sega-logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <span class="title"></span>
+      <div class="game-box">
+
+        <div class="start">
+          <button onclick="start()">Start</button>
+        </div>
+
+        <div class="start restart" style="display: none;">
+        <span></span>
+        <button onclick="restart()">Restart</button>
+      </div>
+
+        <div onclick="game(this.id)" data-top="16" data-left="16" id="box1" class="box box1" data-full="yes"></div>
+        <div onclick="game(this.id)" data-top="16" data-left="50" id="box2" class="box box2" data-full="yes"></div>
+        <div onclick="game(this.id)" data-top="16" data-left="84" id="box3" class="box box3" data-full="yes"></div>
+        <div onclick="game(this.id)" data-top="50" data-left="16" id="box4" class="box box4" data-full="no"></div>
+        <div onclick="game(this.id)" data-top="50" data-left="50" id="box5" class="box box5" data-full="no"></div>
+        <div onclick="game(this.id)" data-top="50" data-left="84" id="box6" class="box box6" data-full="no"></div>
+        <div onclick="game(this.id)" data-top="84" data-left="16" id="box7" class="box box7" data-full="yes"></div>
+        <div onclick="game(this.id)" data-top="84" data-left="50" id="box8" class="box box8" data-full="yes"></div>
+        <div onclick="game(this.id)" data-top="84" data-left="84" id="box9" class="box box9" data-full="yes"></div>
+        <div onclick="chosePlayer(this.id)" id="player1" class="player blue" data-box="box1"></div>
+        <div onclick="chosePlayer(this.id)" id="player2" class="player blue" data-box="box2"></div>
+        <div onclick="chosePlayer(this.id)" id="player3" class="player blue" data-box="box3"></div>
+        <div onclick="chosePlayer(this.id)" id="player4" class="player red" data-box="box7"></div>
+        <div onclick="chosePlayer(this.id)" id="player5" class="player red" data-box="box8"></div>
+        <div onclick="chosePlayer(this.id)" id="player6" class="player red" data-box="box9"></div>
+      </div>
+    </div>
+
+    <!-- Project -->
+    <script src="app.js"></script>
+  </body>
+</html>
